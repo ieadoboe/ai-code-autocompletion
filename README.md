@@ -93,7 +93,7 @@ The `Code_Search_Net` model implementation makes use of [Weights & Biases](https
 
 ### GPU Performance Metrics
 
-![GPU Performance Metrics](assets/images/eval.png)
+![GPU Performance Metrics](assets/images/gpu.png)
 
 ## Challenges and Limitations
 
