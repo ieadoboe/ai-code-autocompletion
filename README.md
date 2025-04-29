@@ -79,6 +79,16 @@ completion = generate_completion(model, tokenizer, function_prefix)
 print(f"Completion: {completion}")
 ```
 
+## Metrics Tracking
+
+The `Code_Search_Net` model implementation makes use of [Weights & Biases](https://wandb.ai) for metrics tracking. (You will need an account).
+
+![Training Metrics](assets/images/train.png)
+
+![Evaluation Metrics](assets/images/eval.png)
+
+![GPU Performance Metrics](assets/images/eval.png)
+
 ## Challenges and Limitations
 
 1. Context Window Limitations: The model can only see a limited amount of context (often just the current function), making it difficult to understand the broader codebase.
