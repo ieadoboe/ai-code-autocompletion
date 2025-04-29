@@ -79,6 +79,30 @@ completion = generate_completion(model, tokenizer, function_prefix)
 print(f"Completion: {completion}")
 ```
 
+## Demo Application
+
+A web-based demo application is available to showcase the code completion model's capabilities:
+
+- Simple web interface built with `Gradio`
+- Syntax highlighting for Python code
+- Adjustable parameters (temperature, max tokens)
+
+### Running the Demo
+
+```bash
+# Make sure to install the required libraries
+pip install gradio pygments
+
+# Run the demo app
+python src/app/demo.py
+```
+
+Then open your browser at [http://localhost:7860](http://localhost:7860) to interact with the demo.
+
+### Demo App
+
+![Demo Application](assets/images/demo_app.png)
+
 ## Metrics Tracking
 
 The `Code_Search_Net` model implementation makes use of [Weights & Biases](https://wandb.ai) for metrics tracking. (You will need an account).
