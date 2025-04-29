@@ -49,22 +49,22 @@ conda install [package-name]
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/yourusername/ai-code-autocompletion.git
-    cd ai-code-autocompletion
-    ```
+   ```bash
+   git clone https://github.com/yourusername/ai-code-autocompletion.git
+   cd ai-code-autocompletion
+   ```
 
 2. Install dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 3. Open and run the Jupyter notebook:
 
-    ```bash
-    jupyter notebook notebooks/ai_code_autocompletion.ipynb
-    ```
+   ```bash
+   jupyter notebook notebook/ai_code_autocompletion.ipynb
+   ```
 
 4. Follow the steps in the notebook to train and evaluate the model
 
@@ -88,6 +88,6 @@ print(f"Completion: {completion}")
 
 This project demonstrates the feasibility of fine-tuning a code autocompletion model using modern techniques such as PEFT and LoRA. The Salesforce CodeGen model shows promising results for Python code completion tasks.
 
-## License
+## Remarks
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This (the notebook in `notebook/`) was my original submission for my end semester project for the Deep Learning and AI course I took (Winter 2025). I decided to expand the idea into this fully-flegded project you see now using industry best practices for model development and test. This is the first of its kind for me. If you're reading this, it really means a lot to me.
