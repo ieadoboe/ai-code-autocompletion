@@ -11,7 +11,11 @@ Code autocompletion tools have revolutionized software development by predicting
 - Uses the [`Salesforce/codegen-350M-mono`](https://huggingface.co/Salesforce/codegen-350M-mono) model as a base model (from `huggingface`)
 - Implements Parameter-Efficient Fine-Tuning (PEFT) with Low-Rank Adaptation (LoRA) to reduce trainable parameters
 - Training and evaluation pipeline for code completion
-- Tested with some example generation functionality
+- Demo App
+
+### Demo App
+
+![Demo Application](assets/images/demo_app.png)
 
 ## Technical Implementation
 
@@ -98,10 +102,6 @@ python src/app/demo.py
 ```
 
 Then open your browser at [http://localhost:7860](http://localhost:7860) to interact with the demo.
-
-### Demo App
-
-![Demo Application](assets/images/demo_app.png)
 
 ## Metrics Tracking
 
