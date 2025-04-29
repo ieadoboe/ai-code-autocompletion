@@ -4,20 +4,20 @@ This project demonstrates the implementation of an AI-powered code autocompletio
 
 ## Project Overview
 
-Code autocompletion tools have revolutionized software development by predicting and suggesting code as developers type. This project aims to fine-tune a pre-trained Large Language Model (LLM) to complete Python code snippets based on function signatures and docstrings. The model is trained on Python functions from the Code_Search_Net dataset.
+Code autocompletion tools have revolutionized software development by predicting and suggesting code as developers type. The growing insurgence of GitHub Copilot and Cursor Tab, a code autocomplete project was simply a must-try for me. This project aims to fine-tune a pre-trained Large Language Model (LLM) to complete Python code snippets based on function signatures, docstrings and the function itself. The model is trained on Python functions from the `Code_Search_Net` dataset.
 
 ## Features
 
-- Uses the Salesforce/codegen-350M-mono model as a base
-- Implements Parameter-Efficient Fine-Tuning (PEFT) with Low-Rank Adaptation (LoRA)
+- Uses the [`Salesforce/codegen-350M-mono`](https://huggingface.co/Salesforce/codegen-350M-mono) model as a base model (from `huggingface`)
+- Implements Parameter-Efficient Fine-Tuning (PEFT) with Low-Rank Adaptation (LoRA) to reduce trainable parameters
 - Training and evaluation pipeline for code completion
-- Example generation functionality
+- Tested with some example generation functionality
 
 ## Technical Implementation
 
 The project includes:
 
-1. Data preparation from the Code_Search_Net dataset
+1. Data preparation from the `Code_Search_Net` dataset
 2. Tokenization optimized for code
 3. Parameter-Efficient Fine-Tuning with LoRA
 4. Training and evaluation pipeline
@@ -33,33 +33,38 @@ The project includes:
 - Datasets
 - PEFT library
 
-### Installation
+All project libraries and package requirements are listed in the `requirements.txt` file. To install:
 
 ```bash
-pip install transformers datasets
-pip install torch
+pip install [package-name]
+```
+
+or in conda environments (recommended):
+
+```bash
+conda install [package-name]
 ```
 
 ### Running the Project
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/ai-code-autocompletion.git
-cd ai-code-autocompletion
-```
+    ```bash
+    git clone https://github.com/yourusername/ai-code-autocompletion.git
+    cd ai-code-autocompletion
+    ```
 
 2. Install dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 3. Open and run the Jupyter notebook:
 
-```bash
-jupyter notebook 39_ai_code_autocompletion.ipynb
-```
+    ```bash
+    jupyter notebook notebooks/ai_code_autocompletion.ipynb
+    ```
 
 4. Follow the steps in the notebook to train and evaluate the model
 
