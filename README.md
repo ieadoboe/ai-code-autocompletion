@@ -83,9 +83,15 @@ print(f"Completion: {completion}")
 
 The `Code_Search_Net` model implementation makes use of [Weights & Biases](https://wandb.ai) for metrics tracking. (You will need an account).
 
+### Training Metrics
+
 ![Training Metrics](assets/images/train.png)
 
+### Evaluation Metrics
+
 ![Evaluation Metrics](assets/images/eval.png)
+
+### GPU Performance Metrics
 
 ![GPU Performance Metrics](assets/images/eval.png)
 
