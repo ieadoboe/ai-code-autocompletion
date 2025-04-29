@@ -63,7 +63,7 @@ conda install [package-name]
 3. Open and run the Jupyter notebook:
 
    ```bash
-   jupyter notebook notebook/ai_code_autocompletion.ipynb
+   jupyter notebook notebooks/ai_code_autocompletion.ipynb
    ```
 
 4. Follow the steps in the notebook to train and evaluate the model
@@ -130,4 +130,4 @@ This project demonstrates the feasibility of fine-tuning a code autocompletion m
 
 ## Remarks
 
-The notebook in `notebook/` was my original submission for my end semester project for the Deep Learning and AI course I took (Winter 2025). I decided to expand the idea into this fully-flegded project you see now using industry best practices for model development and test. This is the first of its kind for me. If you're reading this, it really means a lot to me.
+The notebook in `notebooks/` was my original submission for my end semester project for the Deep Learning and AI course I took (Winter 2025). I decided to expand the idea into this fully-flegded project you see now using industry best practices for model development and test. This is the first of its kind for me. If you're reading this, it really means a lot to me.
