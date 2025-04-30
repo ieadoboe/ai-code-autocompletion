@@ -15,9 +15,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../.
 
 import streamlit as st
 import torch
-from pygments import highlight
-from pygments.lexers import PythonLexer
-from pygments.formatters import HtmlFormatter
 
 # Import after setting environment variables
 from src.models.inference import load_model_for_inference, generate_completion
