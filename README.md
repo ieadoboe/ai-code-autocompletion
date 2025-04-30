@@ -101,7 +101,7 @@ print(f"Completion: {completion}")
 
 A web-based demo application is available to showcase the code completion model's capabilities:
 
-- Simple web interface built with `Gradio`
+- Simple web interface built with `Streamlit`
 - Syntax highlighting for Python code
 - Adjustable parameters (temperature, max tokens)
 
@@ -109,13 +109,23 @@ A web-based demo application is available to showcase the code completion model'
 
 ```bash
 # Make sure to install the required libraries (included in the requirements.txt)
-pip install gradio pygments
+pip install streamlit pygments
 
 # Run the demo app (from the root directory)
-python src/app/demo.py
+streamlit run src/app/demo.py
 ```
 
-Then open your browser at [http://localhost:7860](http://localhost:7860) to interact with the demo.
+If you encounter any compatibility issues between Streamlit and PyTorch, you can try either of these alternatives:
+
+```bash
+# Option 1: Run with server.enableCORS disabled and server.enableXsrfProtection disabled
+streamlit run src/app/demo.py --server.enableCORS=false --server.enableXsrfProtection=false
+
+# Option 2: Disable watchdog
+STREAMLIT_WATCHDOG_PROCESS_ONE_AT_A_TIME=true streamlit run src/app/demo.py
+```
+
+Then open your browser at the URL displayed in the terminal (typically http://localhost:8501) to interact with the demo.
 
 ## Metrics Tracking
 
