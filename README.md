@@ -84,7 +84,7 @@ All project libraries and package requirements are listed in the `requirements.t
        --learning_rate=5e-4
    ```
 
-6. Also it is possible to train the model on [Google Colab](https://colab.research.google.com) by simply uploading the `notebooks/Model_training.ipynb` notebook to `Google Colab` and and hitting Run.
+6. Also it is possible to train the model on [Google Colab](https://colab.research.google.com) by simply uploading the `notebooks/Model_training.ipynb` notebook to `Google Colab` and hitting Run.
 
 ## Usage Example
 
