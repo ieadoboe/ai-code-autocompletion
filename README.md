@@ -37,17 +37,7 @@ The project includes:
 - Datasets
 - PEFT library
 
-All project libraries and package requirements are listed in the `requirements.txt` file. To install:
-
-```bash
-pip install [package-name]
-```
-
-or in conda environments (recommended):
-
-```bash
-conda install [package-name]
-```
+All project libraries and package requirements are listed in the `requirements.txt` file. To install the requirements, check below "Install dependencies".
 
 ### Running the Project
 
@@ -64,15 +54,39 @@ conda install [package-name]
    pip install -r requirements.txt
    ```
 
+   or in conda environments (recommended):
+
+   ```bash
+   conda install -r requirements.txt
+   ```
+
 3. Open and run the Jupyter notebook:
 
    ```bash
    jupyter notebook notebooks/ai_code_autocompletion.ipynb
    ```
 
-4. Follow the steps in the notebook to train and evaluate the model
+4. Follow the steps in the notebook to train and evaluate the model.
 
-## Example Usage
+5. To train the model locally:
+
+   ```bash
+   # Set environment variables
+   export MODEL_PATH="models/newly-trained model" # The trained model will be saved to this path
+   export WANDB_API_KEY="your-wandb-api-key"  # Optional for metrics tracking
+
+   # Run the training script
+   python src/training/train.py \
+       --model_name="Salesforce/codegen-350M-mono" \
+       --output_dir=$MODEL_PATH \
+       --num_epochs=3 \
+       --batch_size=8 \
+       --learning_rate=5e-4
+   ```
+
+6. Also it is possible to train the model on [Google Colab](https://colab.research.google.com) by simply uploading the `notebooks/Model_training.ipynb` notebook to `Google Colab` and and hitting Run.
+
+## Usage Example
 
 After training, you can use the model to complete code snippets:
 
@@ -94,10 +108,10 @@ A web-based demo application is available to showcase the code completion model'
 ### Running the Demo
 
 ```bash
-# Make sure to install the required libraries
+# Make sure to install the required libraries (included in the requirements.txt)
 pip install gradio pygments
 
-# Run the demo app
+# Run the demo app (from the root directory)
 python src/app/demo.py
 ```
 
@@ -105,7 +119,7 @@ Then open your browser at [http://localhost:7860](http://localhost:7860) to inte
 
 ## Metrics Tracking
 
-The `Code_Search_Net` model implementation makes use of [Weights & Biases](https://wandb.ai) for metrics tracking. (You will need an account).
+The `Codegen-350M-mono` model makes use of [Weights & Biases](https://wandb.ai) for metrics tracking. (You will need an account to get an API key).
 
 ### Training Metrics
 
@@ -122,11 +136,11 @@ The `Code_Search_Net` model implementation makes use of [Weights & Biases](https
 ## Challenges and Limitations
 
 1. Context Window Limitations: The model can only see a limited amount of context (often just the current function), making it difficult to understand the broader codebase.
-2. Computational Efficiency: Code suggestions must appear nearly instantaneously to be useful, requiring model optimization for low latency.
+2. Computational Efficiency: Code suggestions must appear nearly instantaneously to be useful, requiring more (GPU) power and model optimization for low latency.
 
 ## Conclusion
 
-This project demonstrates the feasibility of fine-tuning a code autocompletion model using modern techniques such as PEFT and LoRA. The Salesforce CodeGen model shows promising results for Python code completion tasks.
+This project demonstrates the feasibility of fine-tuning a code autocompletion model using modern techniques such as PEFT and LoRA. The Salesforce CodeGen model shows promising results for not only Python code completion tasks and can easily be extended and trained with other programming languages.
 
 ## Remarks
 
