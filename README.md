@@ -115,17 +115,7 @@ pip install streamlit pygments
 streamlit run src/app/demo.py
 ```
 
-If you encounter any compatibility issues between Streamlit and PyTorch, you can try either of these alternatives:
-
-```bash
-# Option 1: Run with server.enableCORS disabled and server.enableXsrfProtection disabled
-streamlit run src/app/demo.py --server.enableCORS=false --server.enableXsrfProtection=false
-
-# Option 2: Disable watchdog
-STREAMLIT_WATCHDOG_PROCESS_ONE_AT_A_TIME=true streamlit run src/app/demo.py
-```
-
-Then open your browser at the URL displayed in the terminal (typically http://localhost:8501) to interact with the demo.
+Then open your browser at the URL displayed in the terminal (by default: http://localhost:8501) to interact with the demo.
 
 ## Metrics Tracking
 
@@ -154,4 +144,4 @@ This project demonstrates the feasibility of fine-tuning a code autocompletion m
 
 ## Remarks
 
-The notebook in `notebooks/` was my original submission for my end semester project for the Deep Learning and AI course I took (Winter 2025). I decided to expand the idea into this fully-flegded project you see now using industry best practices for model development and test. This is the first of its kind for me. If you're reading this, it really means a lot to me.
+The `ai_code_completions.ipynb` notebook in `notebooks/` was my original submission for my end semester project for the Deep Learning and AI course I took (Winter 2025). I decided to expand the idea into this fully-flegded project you see now using industry best practices for model development and test. This is the first of its kind for me. If you're reading this, it really means a lot to me.
