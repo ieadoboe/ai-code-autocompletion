@@ -60,9 +60,9 @@ st.markdown("""
     }
     /* Style for copy button */
     button[kind="secondary"]:hover {
-        background-color: #299EEC;
+        background-color: #1A71AB;
         color: white;
-        border: 1px solid #299EEC;
+        border: 1px solid #1A71AB;
     }
     
     /* Headers */
